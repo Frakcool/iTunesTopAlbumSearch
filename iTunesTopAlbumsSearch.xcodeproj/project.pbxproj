@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		27639DF3D2F97369AA7A2ECE /* Pods_iTunesTopAlbumsSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB2EB7478E51C6F4EA9C64A /* Pods_iTunesTopAlbumsSearch.framework */; };
+		C5BE843521C0BEE700364BB5 /* TopAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE843421C0BEE700364BB5 /* TopAlbumCell.swift */; };
+		C5BE843721C0C73600364BB5 /* TopAlbumHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BE843621C0C73600364BB5 /* TopAlbumHeader.xib */; };
+		C5BE843921C0C88400364BB5 /* TopAlbumHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE843821C0C88400364BB5 /* TopAlbumHeader.swift */; };
 		C5ECB1D821C0B6160019352C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECB1D721C0B6160019352C /* AppDelegate.swift */; };
 		C5ECB1DA21C0B6160019352C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECB1D921C0B6160019352C /* FirstViewController.swift */; };
 		C5ECB1DC21C0B6160019352C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECB1DB21C0B6160019352C /* SecondViewController.swift */; };
@@ -20,6 +23,9 @@
 		4FDE7D368356F5AB3837525D /* Pods-iTunesTopAlbumsSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesTopAlbumsSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesTopAlbumsSearch/Pods-iTunesTopAlbumsSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		566A0C5BC49B12F718808547 /* Pods-iTunesTopAlbumsSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesTopAlbumsSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesTopAlbumsSearch/Pods-iTunesTopAlbumsSearch.release.xcconfig"; sourceTree = "<group>"; };
 		7CB2EB7478E51C6F4EA9C64A /* Pods_iTunesTopAlbumsSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesTopAlbumsSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BE843421C0BEE700364BB5 /* TopAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumCell.swift; sourceTree = "<group>"; };
+		C5BE843621C0C73600364BB5 /* TopAlbumHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopAlbumHeader.xib; sourceTree = "<group>"; };
+		C5BE843821C0C88400364BB5 /* TopAlbumHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumHeader.swift; sourceTree = "<group>"; };
 		C5ECB1D421C0B6160019352C /* iTunesTopAlbumsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesTopAlbumsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ECB1D721C0B6160019352C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ECB1D921C0B6160019352C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,15 @@
 				566A0C5BC49B12F718808547 /* Pods-iTunesTopAlbumsSearch.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5BE843321C0BEB900364BB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5BE843421C0BEE700364BB5 /* TopAlbumCell.swift */,
+				C5BE843821C0C88400364BB5 /* TopAlbumHeader.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C5ECB1CB21C0B6160019352C = {
@@ -102,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C5ECB1DD21C0B6160019352C /* Main.storyboard */,
+				C5BE843621C0C73600364BB5 /* TopAlbumHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 		C5ECB1ED21C0B64B0019352C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C5BE843321C0BEB900364BB5 /* Cells */,
 				C5ECB1D721C0B6160019352C /* AppDelegate.swift */,
 				C5ECB1D921C0B6160019352C /* FirstViewController.swift */,
 				C5ECB1DB21C0B6160019352C /* SecondViewController.swift */,
@@ -191,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BE843721C0C73600364BB5 /* TopAlbumHeader.xib in Resources */,
 				C5ECB1E421C0B6170019352C /* LaunchScreen.storyboard in Resources */,
 				C5ECB1E121C0B6170019352C /* Assets.xcassets in Resources */,
 				C5ECB1DF21C0B6160019352C /* Main.storyboard in Resources */,
@@ -256,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ECB1DC21C0B6160019352C /* SecondViewController.swift in Sources */,
+				C5BE843921C0C88400364BB5 /* TopAlbumHeader.swift in Sources */,
+				C5BE843521C0BEE700364BB5 /* TopAlbumCell.swift in Sources */,
 				C5ECB1D821C0B6160019352C /* AppDelegate.swift in Sources */,
 				C5ECB1DA21C0B6160019352C /* FirstViewController.swift in Sources */,
 			);
