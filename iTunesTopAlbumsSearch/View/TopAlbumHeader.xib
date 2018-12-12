@@ -13,42 +13,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopAlbumHeader" customModule="iTunesTopAlbumsSearch" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="518" height="40"/>
+            <rect key="frame" x="0.0" y="0.0" width="518" height="110"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzQ-fd-bXn">
-                    <rect key="frame" x="0.0" y="0.0" width="518" height="40"/>
+                    <rect key="frame" x="0.0" y="0.0" width="518" height="110"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" verticalHuggingPriority="251" placeholder="Search Album" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-sx-e31">
+                            <rect key="frame" x="0.0" y="54" width="518" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-IW-hte">
+                            <rect key="frame" x="0.0" y="5" width="518" height="35"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="5"/>
+                                <segment title="10"/>
+                                <segment title="25"/>
+                                <segment title="50"/>
+                                <segment title="75"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8G6-sx-e31" secondAttribute="trailing" id="4au-zb-jjl"/>
+                        <constraint firstItem="8G6-sx-e31" firstAttribute="leading" secondItem="wzQ-fd-bXn" secondAttribute="leading" id="JeL-tn-0dQ"/>
+                        <constraint firstAttribute="trailing" secondItem="bqn-IW-hte" secondAttribute="trailing" id="O1r-3J-Jx8"/>
+                        <constraint firstItem="bqn-IW-hte" firstAttribute="top" secondItem="wzQ-fd-bXn" secondAttribute="top" constant="5" id="Our-Sh-tTc"/>
+                        <constraint firstAttribute="bottom" secondItem="8G6-sx-e31" secondAttribute="bottom" id="n3D-ZA-6sm"/>
+                        <constraint firstItem="8G6-sx-e31" firstAttribute="top" secondItem="bqn-IW-hte" secondAttribute="bottom" constant="15" id="vr0-Cg-6fs"/>
+                        <constraint firstItem="bqn-IW-hte" firstAttribute="leading" secondItem="wzQ-fd-bXn" secondAttribute="leading" id="wFs-mo-cKN"/>
+                    </constraints>
                 </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-IW-hte">
-                    <rect key="frame" x="0.0" y="5" width="518" height="31"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <segments>
-                        <segment title="5"/>
-                        <segment title="10"/>
-                        <segment title="25"/>
-                        <segment title="50"/>
-                        <segment title="75"/>
-                    </segments>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bqn-IW-hte" secondAttribute="trailing" id="H4p-2Y-AUP"/>
-                <constraint firstItem="bqn-IW-hte" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KXo-IM-PcL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bqn-IW-hte" secondAttribute="bottom" constant="5" id="Qnx-px-AMf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wzQ-fd-bXn" secondAttribute="bottom" id="fdZ-m0-j5k"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wzQ-fd-bXn" secondAttribute="trailing" id="mc6-ac-wd9"/>
                 <constraint firstItem="wzQ-fd-bXn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pgA-Qn-ceN"/>
                 <constraint firstItem="wzQ-fd-bXn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="y4T-Bj-Ldd"/>
-                <constraint firstItem="bqn-IW-hte" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="yUF-ba-b8Z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="segmentedControl" destination="bqn-IW-hte" id="ieg-AU-baX"/>
             </connections>
-            <point key="canvasLocation" x="161.59999999999999" y="-39.580209895052477"/>
+            <point key="canvasLocation" x="161.59999999999999" y="-8.0959520239880067"/>
         </view>
     </objects>
 </document>
