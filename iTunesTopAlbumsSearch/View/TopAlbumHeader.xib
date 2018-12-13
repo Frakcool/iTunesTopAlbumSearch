@@ -33,6 +33,9 @@
                                 <segment title="50"/>
                                 <segment title="75"/>
                             </segments>
+                            <connections>
+                                <action selector="numberOfResultsChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="JfZ-jt-lcl"/>
+                            </connections>
                         </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +60,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="searchBar" destination="8G6-sx-e31" id="PId-lf-P07"/>
                 <outlet property="segmentedControl" destination="bqn-IW-hte" id="ieg-AU-baX"/>
             </connections>
             <point key="canvasLocation" x="161.59999999999999" y="-8.0959520239880067"/>

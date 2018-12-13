@@ -13,8 +13,14 @@ class TopAlbumCell: UITableViewCell {
 	@IBOutlet weak var albumLabel: UILabel!
 	@IBOutlet weak var artistLabel: UILabel!
 	
-	func setup() {
-		self.albumLabel.text = "Album"
-		self.artistLabel.text = "Artist"
+	let service = ITunesService()
+	
+	func setup(album: AlbumResponse) {
+		self.albumLabel.text = album.albumName
+		self.artistLabel.text = album.artistName
+		
+		service.downloadImageFrom(urlString: album.imageUrl) { (imageData) in
+			self.albumIcon.image = UIImage(data: imageData)
+		}
 	}
 }
