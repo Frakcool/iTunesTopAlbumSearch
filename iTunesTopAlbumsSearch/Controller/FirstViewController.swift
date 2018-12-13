@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
 	var iTunesService = ITunesService()
 	var albums: [AlbumResponse] = []
 	var currentHeaderIndex = 0
+    var dataToSend = ""
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,12 +23,15 @@ class FirstViewController: UIViewController {
 		iTunesService.downloadTopAlbums(number: 5)
 		self.setupITunesService()
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsController = segue.destination as! DetailsViewController
+        detailsController.albumName = dataToSend
+    }
 }
 
 extension FirstViewController: TopAlbumHeaderDelegate {
 	func userDidASearch(searchBar: UISearchBar, userSearch: String, segmentedControlIndex: Int) {
-		print("WOLOLO ", userSearch)
-		
 		self.view.endEditing(true)
 		
 		var numberOfResults = 0
@@ -51,8 +55,10 @@ extension FirstViewController: TopAlbumHeaderDelegate {
 	
 	func setupITunesService() {
 		let success: AlbumsSuccess = { [unowned self] albumsResponse in
-			self.albums = albumsResponse
-			self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.albums = albumsResponse
+                self.tableView.reloadData()
+            }
 		}
 		
 		iTunesService.success = success
@@ -64,6 +70,11 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
 		return albums.count
 	}
 	
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dataToSend = albums[indexPath.row].albumName
+        self.performSegue(withIdentifier: "detailsSegue", sender: self)
+    }
+    
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TopAlbumCell else {
 			return UITableViewCell()

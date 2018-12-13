@@ -24,7 +24,7 @@ class ITunesService {
 			return
 		}
 		
-		Alamofire.request(url).responseJSON { response in
+        Alamofire.request(url).responseJSON(queue: DispatchQueue.global(), options: .mutableLeaves) { response in
 			let json = JSON(rawValue: response.result.value!)!
 			
 			var albums: [AlbumResponse] = []
