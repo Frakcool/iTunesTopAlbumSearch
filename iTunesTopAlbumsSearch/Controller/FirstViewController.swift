@@ -13,7 +13,7 @@ class FirstViewController: UIViewController {
 	var iTunesService = ITunesService()
 	var albums: [AlbumResponse] = []
 	var currentHeaderIndex = 0
-    var dataToSend = ""
+    var albumToSend: AlbumResponse?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailsController = segue.destination as! DetailsViewController
-        detailsController.albumName = dataToSend
+        detailsController.album = albumToSend
     }
 }
 
@@ -71,7 +71,7 @@ extension FirstViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataToSend = albums[indexPath.row].albumName
+        albumToSend = albums[indexPath.row]
         self.performSegue(withIdentifier: "detailsSegue", sender: self)
     }
     

@@ -120,6 +120,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-Zc-6ny">
                                 <rect key="frame" x="281.5" y="64" width="93.5" height="187.5"/>
                                 <state key="normal" image="album"/>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="xah-3a-dTh" eventType="touchUpInside" id="eEk-xe-eLn"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nfB-1T-lAn">
                                 <rect key="frame" x="0.0" y="251.5" width="375" height="415.5"/>
@@ -174,6 +177,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dwf-ib-f9d"/>
                     </view>
+                    <connections>
+                        <outlet property="albumIcon" destination="2xs-sa-df8" id="Qac-eh-XKO"/>
+                        <outlet property="albumNameLabel" destination="RP9-X3-ird" id="5pn-AI-bhG"/>
+                        <outlet property="artistNameLabel" destination="S28-QI-1bp" id="VCY-L9-v6N"/>
+                        <outlet property="categoryLabel" destination="WUU-Ln-FE0" id="Ztd-fH-k4g"/>
+                        <outlet property="favoriteIcon" destination="ZR1-Zc-6ny" id="LUT-Hf-eD0"/>
+                        <outlet property="priceLabel" destination="hIO-66-smB" id="sKB-IC-89q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d65-2v-25e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

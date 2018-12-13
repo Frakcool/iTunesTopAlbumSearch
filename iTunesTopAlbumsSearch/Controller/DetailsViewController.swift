@@ -9,9 +9,24 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    var albumName: String = ""
+    @IBOutlet weak var albumIcon: UIImageView!
+    @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var favoriteIcon: UIButton!
+    
+    var album: AlbumResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        albumNameLabel.text = "Album: \(album?.albumName ?? "")"
+        artistNameLabel.text = "Artist: \(album?.artistName ?? "")"
+        categoryLabel.text = "Category: \(album?.category ?? "")"
+        priceLabel.text = "Price: \(album?.price ?? "")"
+    }
+    
+    @IBAction func toggleFavorite(_ sender: Any) {
     }
 }

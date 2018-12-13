@@ -32,10 +32,12 @@ class ITunesService {
 			let entries = json["feed"]["entry"].array!
 
 			for entry in entries {
-				let albumName = entry["im:name"]["label"].string!
-				let artistName = entry["im:artist"]["label"].string!
+				let albumName = entry["im:name"]["label"].stringValue
+				let artistName = entry["im:artist"]["label"].stringValue
+                let price = entry["im:price"]["label"].stringValue
+                let category = entry["category"]["attributes"]["label"].stringValue
 				if let imageUrl = entry["im:image"][2]["label"].string {
-					let album = AlbumResponse(albumName: albumName, artistName: artistName, imageUrl: imageUrl)
+                    let album = AlbumResponse(albumName: albumName, artistName: artistName, imageUrl: imageUrl, category: category, price: price, isFavorite: false)
 					albums.append(album)
 				}
 			}
