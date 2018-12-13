@@ -9,16 +9,9 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    @IBOutlet weak var testLabel: UILabel!
     var albumName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testLabel.text = albumName
     }
-    
-//    @IBAction func backButtonPressed(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
 }
