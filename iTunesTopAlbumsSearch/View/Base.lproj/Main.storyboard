@@ -132,9 +132,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dwf-ib-f9d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tCT-eF-0e9">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="BJu-Ie-GJp"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="testLabel" destination="dz3-gE-EYG" id="S5T-ja-Y6N"/>
                     </connections>
