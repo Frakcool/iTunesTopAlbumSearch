@@ -37,7 +37,7 @@ class DetailsViewController: UIViewController {
 	
 	func setFavorite(isUserSelected: Bool) {
 		if isUserSelected {
-			album?.isFavorite = !album!.isFavorite
+            album?.isFavorite = !(album!.isFavorite)
 		}
 		
 		if album!.isFavorite {
