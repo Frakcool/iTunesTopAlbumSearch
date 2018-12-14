@@ -24,13 +24,28 @@ class DetailsViewController: UIViewController {
 		service.downloadImageFrom(urlString: album!.imageUrl) { (imageData) in
 			self.albumIcon.image = UIImage(data: imageData)
 		}
-        albumNameLabel.text = "Album: \(album?.albumName ?? "")"
-        artistNameLabel.text = "Artist: \(album?.artistName ?? "")"
-        categoryLabel.text = "Category: \(album?.category ?? "")"
-        priceLabel.text = "Price: \(album?.price ?? "")"
+        albumNameLabel.text = "Album: \(album!.albumName)"
+        artistNameLabel.text = "Artist: \(album!.artistName)"
+        categoryLabel.text = "Category: \(album!.category)"
+        priceLabel.text = "Price: \(album!.price)"
+		setFavorite(isUserSelected: false)
     }
     
     @IBAction func toggleFavorite(_ sender: Any) {
-		
+		setFavorite(isUserSelected: true)
     }
+	
+	func setFavorite(isUserSelected: Bool) {
+		if isUserSelected {
+			album?.isFavorite = !album!.isFavorite
+		}
+		
+		if album!.isFavorite {
+			favoriteIcon.setImage(UIImage(named: "favorite"), for: .normal)
+			favoriteIcon.setTitle("   Favorite", for: .normal)
+		} else {
+			favoriteIcon.setImage(UIImage(named: "unfavorite"), for: .normal)
+			favoriteIcon.setTitle("Unfavorite", for: .normal)
+		}
+	}
 }

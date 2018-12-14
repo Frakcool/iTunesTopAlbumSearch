@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27639DF3D2F97369AA7A2ECE /* Pods_iTunesTopAlbumsSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB2EB7478E51C6F4EA9C64A /* Pods_iTunesTopAlbumsSearch.framework */; };
 		2A3B127421C30A180075F282 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B127321C30A180075F282 /* DetailsViewController.swift */; };
+		C5011EC521C364D600F70EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5011EC421C364D500F70EB4 /* Assets.xcassets */; };
 		C55164E321C1E390004E0DD5 /* ITunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55164E221C1E390004E0DD5 /* ITunesService.swift */; };
 		C55164E521C1E60A004E0DD5 /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55164E421C1E60A004E0DD5 /* AlbumResponse.swift */; };
 		C5BE843521C0BEE700364BB5 /* TopAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE843421C0BEE700364BB5 /* TopAlbumCell.swift */; };
@@ -18,7 +19,6 @@
 		C5ECB1DA21C0B6160019352C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECB1D921C0B6160019352C /* FirstViewController.swift */; };
 		C5ECB1DC21C0B6160019352C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECB1DB21C0B6160019352C /* SecondViewController.swift */; };
 		C5ECB1DF21C0B6160019352C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ECB1DD21C0B6160019352C /* Main.storyboard */; };
-		C5ECB1E121C0B6170019352C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5ECB1E021C0B6170019352C /* Assets.xcassets */; };
 		C5ECB1E421C0B6170019352C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ECB1E221C0B6170019352C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +27,7 @@
 		4FDE7D368356F5AB3837525D /* Pods-iTunesTopAlbumsSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesTopAlbumsSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesTopAlbumsSearch/Pods-iTunesTopAlbumsSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		566A0C5BC49B12F718808547 /* Pods-iTunesTopAlbumsSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesTopAlbumsSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesTopAlbumsSearch/Pods-iTunesTopAlbumsSearch.release.xcconfig"; sourceTree = "<group>"; };
 		7CB2EB7478E51C6F4EA9C64A /* Pods_iTunesTopAlbumsSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesTopAlbumsSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5011EC421C364D500F70EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C55164E221C1E390004E0DD5 /* ITunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesService.swift; sourceTree = "<group>"; };
 		C55164E421C1E60A004E0DD5 /* AlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
 		C5BE843421C0BEE700364BB5 /* TopAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumCell.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		C5ECB1D921C0B6160019352C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C5ECB1DB21C0B6160019352C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C5ECB1DE21C0B6160019352C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C5ECB1E021C0B6170019352C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5ECB1E321C0B6170019352C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5ECB1E521C0B6170019352C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +106,8 @@
 				C5ECB1ED21C0B64B0019352C /* Controller */,
 				C5ECB1EC21C0B6460019352C /* View */,
 				C5ECB1EF21C0B6560019352C /* Utilities */,
-				C5ECB1E021C0B6170019352C /* Assets.xcassets */,
 				C5ECB1E221C0B6170019352C /* LaunchScreen.storyboard */,
+				C5011EC421C364D500F70EB4 /* Assets.xcassets */,
 			);
 			path = iTunesTopAlbumsSearch;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			files = (
 				C5BE843721C0C73600364BB5 /* TopAlbumHeader.xib in Resources */,
 				C5ECB1E421C0B6170019352C /* LaunchScreen.storyboard in Resources */,
-				C5ECB1E121C0B6170019352C /* Assets.xcassets in Resources */,
+				C5011EC521C364D600F70EB4 /* Assets.xcassets in Resources */,
 				C5ECB1DF21C0B6160019352C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
