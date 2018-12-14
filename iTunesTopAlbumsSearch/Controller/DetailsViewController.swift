@@ -17,10 +17,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var favoriteIcon: UIButton!
     
     var album: AlbumResponse?
+	let service = ITunesService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		service.downloadImageFrom(urlString: album!.imageUrl) { (imageData) in
+			self.albumIcon.image = UIImage(data: imageData)
+		}
         albumNameLabel.text = "Album: \(album?.albumName ?? "")"
         artistNameLabel.text = "Artist: \(album?.artistName ?? "")"
         categoryLabel.text = "Category: \(album?.category ?? "")"
@@ -28,5 +31,6 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func toggleFavorite(_ sender: Any) {
+		
     }
 }
